@@ -1,0 +1,384 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dd,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 12px;
+  font-family: "微软雅黑";
+}
+a{text-decoration: none;}
+img.auto {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.warp {
+  width: 100%;
+  height: 570px;
+}
+.header {
+  width: 100%;
+  height: 56px;
+  background-color: #ce3d3e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo {
+  width: 15.2em;
+  height: auto;
+  padding-left: 2.5%;
+}
+.header .logo img {
+  width: 100%;
+}
+.header .search {
+  padding-right: 6%;
+  font-size: 2em;
+  color: #fff;
+}
+
+/*导航栏*/
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav-bar .navLi {
+  font-size: 4vw;
+  line-height: 4.6em;
+  padding: 0 3.8%;
+  border-bottom: 0.2em solid #fff;
+}
+.nav-bar .navLi.active {
+  color: #ce3d3e;
+  border-color: #ce3d3e;
+}
+
+
+/*推荐歌单*/
+.playlist{
+	padding-bottom: 50px;
+}
+.playlist .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.playlist .title p {
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  padding-top: 0.5rem;
+}
+.playlist .title p i {
+  width: 1.8rem;
+  height: 1.8rem;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  float: left;
+  display: inline-block;
+}
+.playlist .title .more {
+  font-size: 1.2rem;
+  color: #666666;
+}
+.songList {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.songList .cell {
+  width: 33%;
+  position: relative;
+}
+.songList .cell a {
+  display: block;
+}
+.songList .cell a .number {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 2.5em;
+  display: block;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.songList .cell a p {
+  padding: 0.6em 0 0.3em 0;
+  font-size: 2vw;
+  line-height: 1.8em;
+  color: #272727;
+}
+
+/*播放控件*/
+.play-controls #audioPlay{
+	display: none;
+	height: 0;
+}
+.play-controls {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 4.6em;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.play-controls .song-info {
+  width: 125px;
+  height: 100%;
+  border-bottom: 2px #ce3d3e solid;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.play-controls .song-info .song-pic {
+  width: 4em;
+  height: 4em;
+  padding: 0.5em;
+}
+.play-controls .song-info .sing-info p {
+  line-height: 2em;
+  height: 2em;
+}
+.play-controls .song-info .sing-info span {
+  line-height: 2em;
+  height: 2em;
+}
+.play-controls .controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+.play-controls .controls div {
+  width: 2.4em;
+  height: 2.4em;
+}
+
+/*全部歌单*/
+.alllist{
+	padding: 0 3.2%;
+	font-size: 12px;
+}
+.alllist .title{
+	line-height: 1.9rem;
+	border-left: 3px solid #ce3d3e;
+	padding-left: 5px;
+	margin:5px 0;
+}
+.alllist .detaillist{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow-y:auto;
+	padding-bottom: 50px;
+}
+.alllist .detaillist .detail{
+	width: 40%;
+	flex: 1 1 40%;
+	margin: 0 1px;
+	position: relative;
+}
+.detaillist .detail .count{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	color: #fff;
+	text-align: right;
+	padding:2px 0;
+	background-color: rgba(0,0,0,0.3);
+}
+.detaillist .detail .detail-name{
+	line-height: 2.6rem;
+	height:2.6rem;
+	overflow: hidden;
+	color: #212121;
+}
+
+/*歌曲列表*/
+#templateMusic{
+	margin-top: -56px;
+}
+.mu-bar{
+	height: 56px;
+	width: 100%;
+	background-color: rgba(206,60,60,1);
+	padding-left: 10px;
+	line-height: 56px;
+	font-size: 24px;
+	color: #fff;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 15;
+}
+.mu-bar .back-btn{
+	font-size: 20px;
+	line-height: 56px;
+	display: inline-block;
+	padding: 0 10px;
+}
+.mu-bar .mubar-title{
+	padding: 0 8px;
+}
+.playlist-info{
+	padding: 60px 1rem 0;
+	position: relative;
+}
+.playlist-info .backImg{
+	width: 100%;
+	height: 100%;
+	background:url(../images/banner4.jpg) no-repeat center/cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	filter: blur(20px);
+	-webkit-filter: blur(20px);
+	z-index: 1;
+	overflow: hidden;
+}
+.playlist-info .bg-wask{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.playlist-info  .info-wrap {
+		position: relative;
+		z-index: 5;
+		display: flex;
+		min-width: 250px;
+		min-height: 200px;
+}
+.playlist-info  .info-wrap .info-gallery{
+	width: 40%;
+	position: relative;
+		padding-bottom: 50px;
+		min-width: 95px;
+}
+.playlist-info  .info-wrap .info-gallery .span{
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: right;
+	font-size: 12px;
+	color: #FFFFFF;
+	line-height: 2.1rem;
+	width: 100%;
+	display: block;
+	background-color:rgba(0,0,0,.35) ;
+}
+.playlist-info  .info-wrap .info-gallery .span span{
+	padding-right:5px ;
+}
+.playlist-info  .info-title{
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #fff;
+	padding-left: 5%;
+} 
+.playlist-info  .info-title .title{
+	line-height: 18px;
+	padding: 5px 0;
+}
+.playlist-info .info-title .author>div{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: left;
+}
+.playlist-info .info-title .author img{
+	border-radius: 50%;
+}
+.playlist-info .info-title .author span{
+	line-height: 30px;
+	float: left;
+	padding-left: 5px;
+}
+
+/*歌曲列表*/
+.playlist-holder{
+	padding-bottom: 50px;
+}
+.playlist-holder .all-add{
+	margin-left: 0.7rem;
+	font-size: 12px;
+	color: #291e20;
+	height: 36px;
+	line-height: 36px;
+	border-bottom: 1px solid #f9e8f4;
+}
+.playlist-holder .all-add .add-btn{
+	width:25%;
+}
+.playlist-holder .all-add i{
+	font-size: 15px;
+	padding:8px 0px 10px 0;
+	display:inline-block;
+}
+.playlist-holder .mu-list{
+	width:100%;
+	padding: 8px 0;
+	overflow-y: visible;
+	overflow-x: hidden;
+}
+.playlist-holder .mu-list a{
+	display: block;
+	width: 100%;
+}
+.playlist-holder .mu-list .mu-item{
+	display: flex;
+		position: relative;
+}
+.mu-item-content{
+	margin-left:75px;
+	padding:17px 0;
+	flex-grow: 1;
+	border-bottom: 1px solid #f9e8f4;
+}
+.playlist-holder .mu-list .mu-item-number{
+	font-size: 18px;
+	line-height: 2.3em;
+	width: 40px;
+	text-align: center;
+	color: #797674;
+	font-weight: bolder;
+	position: absolute;
+	top: 17px;
+	left: 15px;
+}
+.playlist-holder .mu-list .mu-item-song{
+	font-size: 16px;
+	line-height: 1.44em;
+	color: #291e20;
+}
+.playlist-holder .mu-list .mu-item-singer{
+	font-size: 1.3em;
+	color: #797674;
+}
